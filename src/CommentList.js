@@ -10,7 +10,7 @@ const CommentList = () => {
           <React.Fragment key={data.id}>
             <Comment comment={data} />
             {data.replies.map((reply) => (
-              <Comment comment={reply} key={reply.id} />
+              <Comment comment={reply} key={reply.id} marginleft={"30px"} />
             ))}
           </React.Fragment>
         );

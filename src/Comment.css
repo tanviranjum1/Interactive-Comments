@@ -1,5 +1,19 @@
-.vertical-button-group {
-  display: flex;
-  flex-direction: column;
+Button {
   width: 30px;
+}
+
+.user {
+  font-weight: 500;
+}
+
+.reply {
+  color: #5357b6;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-bottom: 20px;
 }

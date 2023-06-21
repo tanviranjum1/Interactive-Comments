@@ -3,9 +3,9 @@ import CommentList from "./CommentList";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <CommentList />
-    </>
+    </div>
   );
 }
 
