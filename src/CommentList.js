@@ -9,9 +9,14 @@ const CommentList = () => {
       {data.comments.map((data) => {
         return (
           <React.Fragment key={data.id}>
-            <Comment comment={data} />
+            <Comment comment={data} score={data.score} />
             {data.replies.map((reply) => (
-              <Comment comment={reply} key={reply.id} marginleft={"30px"} />
+              <Comment
+                comment={reply}
+                key={reply.id}
+                marginleft={"30px"}
+                score={reply.score}
+              />
             ))}
           </React.Fragment>
         );

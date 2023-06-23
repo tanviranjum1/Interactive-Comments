@@ -15,7 +15,7 @@ import { ReactComponent as Minus } from "./icons/icon-minus.svg";
 
 import "./Comment.css";
 
-function Comment({ comment, marginleft }) {
+function Comment({ comment, marginleft, score }) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
@@ -35,16 +35,24 @@ function Comment({ comment, marginleft }) {
     setReply(!reply);
   };
 
+  let [val, setVal] = useState(score);
+  const handleIncrement = () => {
+    setVal(val + 1);
+  };
+
+  const handleDecrement = () => {
+    setVal(val - 1);
+  };
+
   return (
     <>
       <Card className="card" style={{ marginLeft: marginleft }}>
         <ButtonGroup vertical>
-          <Button variant="default">
+          <Button variant="default" onClick={handleIncrement}>
             <Plus />
           </Button>
-          <Button variant="default">{comment.score} </Button>
-          <Button variant="default">
-            {" "}
+          <Button variant="default">{val} </Button>
+          <Button variant="default" onClick={handleDecrement}>
             <Minus />{" "}
           </Button>
         </ButtonGroup>
