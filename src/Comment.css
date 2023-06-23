@@ -1,7 +1,3 @@
-Button {
-  width: 30px;
-}
-
 .user {
   font-weight: 500;
 }
@@ -11,9 +7,19 @@ Button {
   cursor: pointer;
 }
 
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .card {
   display: flex;
-  flex-direction: row;
-  background-color: white;
   margin-bottom: 20px;
+  flex-direction: row;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }

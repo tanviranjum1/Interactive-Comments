@@ -1,6 +1,7 @@
 import React from "react";
 import data from "./data//data.json";
 import Comment from "./Comment";
+import NewComment from "./NewComment";
 
 const CommentList = () => {
   return (
@@ -15,6 +16,7 @@ const CommentList = () => {
           </React.Fragment>
         );
       })}
+      <NewComment />
     </div>
   );
 };
